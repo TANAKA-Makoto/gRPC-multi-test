@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package back;
+
+service BackService {
+  rpc Show(ShowTeamRequest) returns (ShowTeamsResponse);
+}
+
+message ShowTeamRequest {
+  int64 id = 1;
+}
+
+message ShowTeamsResponse {
+  int64 id = 1;
+  string name = 2;
+  repeated string members = 3;
+}

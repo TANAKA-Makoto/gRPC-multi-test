@@ -1,0 +1,16 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "grpc test front server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "TANAKA-Makoto",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.4",
+    "grpc": "^1.24.3",
+    "grpc-promise": "^1.4.0"
+  }
+}

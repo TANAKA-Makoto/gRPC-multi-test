@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package calc;
+
+service CalcService{
+  rpc Sum(SumElements) returns (SumResponse);
+}
+
+message SumElements {
+  repeated int64 elem = 1;
+}
+
+message SumResponse{
+  int64 result = 1;
+}
