@@ -1,5 +1,6 @@
 from concurrent import futures
 import logging
+import time
 
 import grpc
 
@@ -12,6 +13,11 @@ class Calc(calc_pb2_grpc.CalcService):
     def Sum(self, request, context):
         res = sum(request.elem)
         return calc_pb2.SumResponse(result=res)
+
+    def DelayHello(self, request, context):
+        time.sleep(request.time)
+        res = "hello" + str(request.time)
+        return calc_pb2.HelloResponse(msg=res)
 
 
 def serve():

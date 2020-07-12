@@ -22,6 +22,11 @@ process.stdin.on('data', async function (data) {
             }else{
             console.log(res)}
         })
+        calc_client.DelayHello({time:Number(data)},(err,res)=>{
+            if (err) {console.log(err)
+            }else{
+            console.log(res)}
+        })
         calc_client.Sum({elem:[Number(data),Number(data)]},(err,res)=>{
             if (err) {console.log(err)
             }else{

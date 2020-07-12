@@ -4,6 +4,7 @@ package calc;
 
 service CalcService{
   rpc Sum(SumElements) returns (SumResponse);
+  rpc DelayHello(time) returns (HelloResponse);
 }
 
 message SumElements {
@@ -12,4 +13,12 @@ message SumElements {
 
 message SumResponse{
   int64 result = 1;
+}
+
+message time{
+  int64 time = 1;
+}
+
+message HelloResponse{
+  string msg = 1;
 }
